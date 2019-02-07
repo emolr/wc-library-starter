@@ -13,12 +13,6 @@ Start by downloading this repository
 git clone https://github.com/emolr/wc-library-starter.git
 ```
 
-Install dependencies
-
-```sh
-npm run install
-```
-
 Bootstrap project and make the first build
 
 ```sh
