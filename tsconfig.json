@@ -15,7 +15,11 @@
       "skipLibCheck": true,
       "strict": true,
       "noImplicitAny": false,
-      "composite": true
+      "composite": true,
+      "baseUrl": "./packages",
+      "paths": {
+        "@yo/yo-*": ["./*/src"]
+      },
     },
     "include": [
       "packages/**/*.ts"

@@ -4,5 +4,8 @@
   "description": "",
   "main": "button.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@framejs/core": "^1.0.9"
+  }
 }
