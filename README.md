@@ -37,6 +37,12 @@ Build all components
 npm run build
 ```
 
+Build storybook
+```sh
+npm run build && npm run storybook:build
+```
+*This generates `/_site` that can be hosted using eg. [netlify](https://www.netlify.com)*
+
 ### Running tests
 Tests should be written in `.js` and be located in `/test/**/*.test.js`. Read more about the test suite on [open-wc](https://open-wc.org/testing/#example-tests)
 
