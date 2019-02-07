@@ -30,13 +30,12 @@ Transpile typescript, and generate styles on file changes
 ```sh
 npm start
 ```
+*This also starts the storybook on http://localhost:9001/*
 
 Build all components
 ```sh
 npm run build
 ```
-
-*This also starts the storybook on http://localhost:9001/*
 
 ### Running tests
 Tests should be written in `.js` and be located in `/test/**/*.test.js`. Read more about the test suite on [open-wc](https://open-wc.org/testing/#example-tests)
