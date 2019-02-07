@@ -25,17 +25,22 @@
     "test:watch": "npm run build && karma start --auto-watch=true --single-run=false",
     "test:es5": "npm run build && karma start karma.es5.config.js",
     "test:es5:watch": "npm run build && karma start karma.es5.config.js --auto-watch=true --single-run=false",
-    "test:es5:bs": "npm run build && karma start karma.es5.bs.config.js"
+    "test:es5:bs": "npm run build && karma start karma.es5.bs.config.js",
+    "site:build": "npm run build && pm run storybook:build",
+    "storybook:build": "pm run build && build-storybook -o _site",
+    "storybook:start": "concurrently --kill-others \"npm run watch\" \"start-storybook -p 9001\""
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@open-wc/storybook": "^0.2.0",
     "@open-wc/testing": "^0.9.0",
     "@open-wc/testing-karma": "^0.4.0",
     "@open-wc/testing-karma-bs": "^0.2.0",
     "@types/mocha": "^5.2.5",
     "command-line-args": "^5.0.2",
     "command-line-usage": "^5.0.5",
+    "concurrently": "^4.1.0",
     "del-cli": "^1.1.0",
     "karma-typescript-preprocessor": "^0.4.0",
     "node-sass-import": "^2.0.1",
