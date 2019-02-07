@@ -1,0 +1,40 @@
+{
+  "name": "ts-lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "watch": {
+    "build": {
+      "patterns": [
+        "packages/**/src/**/*.*"
+      ],
+      "extensions": "ts, scss",
+      "quiet": false,
+      "ignore": "packages/**/src/*.css.ts"
+    }
+  },
+  "scripts": {
+    "watch": "npm-watch",
+    "build": "npm run build:styling && npm run build:typescript",
+    "clean": "del-cli packages/*/node_modules packages/*/package-lock.json && npm run clean:typescript && npm run clean:styles",
+    "build:typescript": "tsc --build packages/**/tsconfig.json",
+    "clean:typescript": "npm run build:typescript -- --clean",
+    "build:styling": "./scripts/build-styling.sh",
+    "clean:styles": "del-cli packages/*/src/*.css.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "command-line-args": "^5.0.2",
+    "command-line-usage": "^5.0.5",
+    "del-cli": "^1.1.0",
+    "node-sass-import": "^2.0.1",
+    "npm-watch": "^0.6.0",
+    "sass": "^1.17.0",
+    "typescript": "^3.3.1"
+  },
+  "dependencies": {
+    "lit-element": "^2.0.1"
+  }
+}

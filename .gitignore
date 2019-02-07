@@ -1,0 +1,11 @@
+node_modules
+/build
+/coverage
+.DS_Store
+/gh-pages
+/packages/*/*.js
+/packages/*/*.js.map
+/packages/*/*.d.ts
+/packages/*/src/*.css.ts
+/packages/*/package-lock.json
+!packages/*/custom_types/**
