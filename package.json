@@ -14,6 +14,7 @@
     }
   },
   "scripts": {
+    "start": "npm run storybook:start",
     "bootstrap": "npm install && ./scripts/bootstrap.sh && npm run build",
     "watch": "npm-watch",
     "build": "npm run build:styling && npm run build:typescript",
@@ -30,10 +31,11 @@
     "site:build": "npm run storybook:build",
     "storybook:build": "build-storybook -o _site",
     "clean:storybook": "del-cli _site",
-    "storybook:start": "concurrently --kill-others \"npm run watch\" \"start-storybook -p 9001\""
+    "storybook:start": "concurrently --kill-others \"npm run watch\" \"start-storybook -p 9001\"",
+    "publish": "lerna publish"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@open-wc/storybook": "^0.2.0",
     "@open-wc/testing": "^0.9.0",
